@@ -1,0 +1,17 @@
+/usr/sbin/pppd
+/usr/bin/sudo
+/usr/bin/fusermount3
+/usr/bin/umount
+/usr/bin/mount
+/usr/bin/su
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/vmware-user-suid-wrapper
+/usr/bin/chfn
+/usr/bin/pkexec
+/usr/bin/chsh
+/usr/lib/openssh/ssh-keysign
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/xorg/Xorg.wrap
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper

@@ -1,0 +1,27 @@
+    1  sudo apt install open-vm-tools-desktop
+    2  ps -eo ruid,euid,pid,comm | awk '$2 == 0 && $1 != 0 {print $0}' > ~/suid_processes.out
+    3  sudo cp /bin/cat /home/user1/my_cat
+    4  sudo chown root:students /home/user1/my_cat
+    5  sudo chmod 755 /home/user1/my_cat
+    6  su - user1 -c "/home/user1/my_cat /etc/shadow"
+    7  sudo chmod u+s /home/user1/my_cat
+    8  su - user1 -c "/home/user1/my_cat /etc/shadow"
+    9  sudo cp /bin/chown /home/user1/my_chown
+   10  sudo chown root:students /home/user1/my_chown
+   11  sudo chmod 755 /home/user1/my_chown
+   12  su - user1 -c "touch /home/user1/test_cap.txt"
+   13  sudo setcap cap_chown+ep /home/user1/my_chown
+   14  su - user1 -c "/home/user1/my_chown nobody /home/user1/test_cap.txt"
+   15  ls -l /home/user1/test_cap.txt
+   16  sudo ls -l /home/user1/test_cap.txt
+   17  echo "user1 ALL=(ALL) NOPASSWD: /usr/bin/timedatectl, /usr/bin/date" | sudo tee /etc/sudoers.d/user1_time
+   18  sudo chmod 440 /etc/sudoers.d/user1_time
+   19  sudo visudo -c
+   20  su - user1 -c "sudo /usr/bin/date -s '+1 minute'"
+   21  sudo timedatectl set-ntp true
+   22  echo "Табельный номер: 373024"
+   23  gnome-screenshot
+   24  sudo apt install gnome-screenshot -y
+   25  echo "Табельный номер: 373024"
+   26  gnome-screenshot
+   27  history > ~/history.out
